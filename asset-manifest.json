@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/fakestagram/static/css/main.44ec7100.css",
-    "main.js": "/fakestagram/static/js/main.2a35f1c7.js",
+    "main.js": "/fakestagram/static/js/main.1e024013.js",
     "static/media/instagram_logo.png": "/fakestagram/static/media/instagram_logo.0ba64e82656d6150e154.png",
     "index.html": "/fakestagram/index.html",
     "static/media/upload_icon.svg": "/fakestagram/static/media/upload_icon.6969a2fb22e8cf7ff1a151a6037eb9fc.svg",
     "main.44ec7100.css.map": "/fakestagram/static/css/main.44ec7100.css.map",
-    "main.2a35f1c7.js.map": "/fakestagram/static/js/main.2a35f1c7.js.map"
+    "main.1e024013.js.map": "/fakestagram/static/js/main.1e024013.js.map"
   },
   "entrypoints": [
     "static/css/main.44ec7100.css",
-    "static/js/main.2a35f1c7.js"
+    "static/js/main.1e024013.js"
   ]
 }
