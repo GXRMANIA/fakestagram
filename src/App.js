@@ -1,12 +1,12 @@
 import './App.css';
 import { useState, useEffect } from 'react';
 import Login from './components/Login/Login';
-import { HashRouter, Routes, Route } from "react-router-dom";
 import Signup from './components/Signup/Signup';
 import Main from './components/Main/Main';
-import { onAuthStateChanged} from "firebase/auth";
-import {auth} from "./firebase"
 import Detail from './components/Detail/Detail';
+import { onAuthStateChanged} from "firebase/auth";
+import { HashRouter, Routes, Route } from "react-router-dom";
+import {auth} from "./firebase"
 
 function App() {
 

@@ -37,8 +37,8 @@ export function signup(email, password, username) {
 export async function logInAnon() {
   signInAnonymously(auth).then(() => {
     updateProfile(auth.currentUser, {
-      displayName: "Anonymous", photoURL: "https://example.com/jane-q-user/profile.jpg"
-    })
+          displayName: "Anonymous", photoURL: "https://example.com/jane-q-user/profile.jpg"
+        })
   })
 }
 
