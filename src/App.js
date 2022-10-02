@@ -1,10 +1,10 @@
 import './App.css';
 import { useState, useEffect } from 'react';
 import Login from './components/Login/Login';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Signup from './components/Signup/Signup';
 import Main from './components/Main/Main';
-import { onAuthStateChanged, getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword} from "firebase/auth";
+import { onAuthStateChanged} from "firebase/auth";
 import {auth} from "./firebase"
 import Detail from './components/Detail/Detail';
 
@@ -12,6 +12,7 @@ function App() {
 
   const [loggedIn, setLoggedIn] = useState(false);
   const [currentUser, setCurrentUser] = useState(null)
+
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -40,11 +41,11 @@ function App() {
   }
 
   return (
-    <BrowserRouter>
+    <HashRouter>
     <Routes>
       {app}
     </Routes>
-  </BrowserRouter>
+  </HashRouter>
   );
 }
 

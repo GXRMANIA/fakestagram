@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { updateProfile, signOut, getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, reauthenticateWithRedirect} from "firebase/auth";
+import { updateProfile, signOut, getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signInAnonymously} from "firebase/auth";
 import { getDownloadURL, getStorage, ref, uploadBytes, listAll } from "firebase/storage";
 import { addDoc, updateDoc, getFirestore, doc, setDoc, collection, getDocs, getDoc } from "firebase/firestore";
 
@@ -34,7 +34,13 @@ export function signup(email, password, username) {
     });
 }
 
-
+export async function logInAnon() {
+  signInAnonymously(auth).then(() => {
+    updateProfile(auth.currentUser, {
+      displayName: "Anonymous", photoURL: "https://example.com/jane-q-user/profile.jpg"
+    })
+  })
+}
 
 export function login(email, password) {
   signInWithEmailAndPassword(auth, email, password)

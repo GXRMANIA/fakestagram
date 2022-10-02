@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import { login } from '../../firebase';
+import { login, logInAnon } from '../../firebase';
 import "./Login.css"
 import instagramLogo from "../../images/instagram_logo.png"
 
@@ -18,6 +18,10 @@ const Login = (props) => {
     function handleLoginClick(e) {
         e.preventDefault();
         login(emailInput, passwordInput)
+    }
+    function handleAnonymouseClick(e) {
+        e.preventDefault();
+        logInAnon();
     }
 
     let loginButton;
@@ -36,6 +40,9 @@ const Login = (props) => {
             <div>Need an account?  
                 <Link to="/signup"> Sign up!</Link>
             </div>
+            <Link>
+            <button onClick={handleAnonymouseClick}>Visit as guest</button>
+            </Link>
         </form>
     );
 }
